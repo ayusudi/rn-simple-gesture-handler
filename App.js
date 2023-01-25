@@ -6,13 +6,12 @@ import {
   ImageBackground,
   Alert,
 } from "react-native";
-import { GestureDetector, Gesture } from "react-native-gesture-handler";
+import { GestureHandlerRootView, GestureDetector, Gesture } from "react-native-gesture-handler";
 import backgroundImg from "./assets/bg.png";
 const characterImg = {
   url: "https://static.wikia.nocookie.net/tamagotchi/images/e/e5/Mametchi_standing.png/revision/latest?cb=20220714103055",
 };
 import { useState } from 'react';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function App() {
   const [scale, setScale] = useState(1);
@@ -56,7 +55,7 @@ export default function App() {
       <GestureHandlerRootView style={{ flex: 1 }}>
         <ImageBackground source={backgroundImg} style={styles.background}>
           <GestureDetector gesture={doubleTap}>
-            <Text style={styles.topText}>TamaGotchiApp {scale} {savedScale}</Text>
+            <Text style={styles.topText}>{scale} {savedScale}</Text>
           </GestureDetector>
           <GestureDetector gesture={exlusiveGesture}>
             <Image source={characterImg} style={[styles.character, {
@@ -92,7 +91,7 @@ const styles = StyleSheet.create({
   topText: {
     textAlign: "center",
     fontWeight: "700",
-    fontSize: "20",
+    fontSize: "16",
     color: "#42261c",
     margin: 10,
     position: "absolute",
