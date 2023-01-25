@@ -3,7 +3,8 @@
 - [StyleSheet](https://reactnative.dev/docs/stylesheet)
 - [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/)
   - Installation
-  - Implementation Test Cae
+  - Implementation Test Case
+    - GestureHandlerRootView
     - Tap
     - Pinch
     - Composing Gesture  
